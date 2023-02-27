@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+<from>
+    <table>
+        <tr>
+            <th><input type ="text" id = "output"/></th>
+
+        </tr>
+        <tr>
+            <td>
+                <input type ="button" value="1" id = "mot" onclick="inputvalue(this.value)">
+                <input type ="button" value="2" id = "hai" onclick="inputvalue(this.value)">
+                <input type ="button" value="3" id = "ba" onclick="inputvalue(this.value)">
+                <input type ="button" value="+" id = "cong" onclick="inputvalue(this.value)">
+
+
+            </td>
+        </tr>
+        <td>
+            <input type ="button" value="4" id = "bon" onclick="inputvalue(this.value)">
+            <input type ="button" value="5" id = "nam" onclick="inputvalue(this.value)">
+            <input type ="button" value="6" id = "sau" onclick="inputvalue(this.value)">
+            <input type ="button" value="-" id = "tru" onclick="inputvalue(this.value)">
+        </td>
+        <tr>
+            <td>
+                <input type ="button" value="7" id = "bay" onclick="inputvalue(this.value)">
+                <input type ="button" value="8" id = "tam" onclick="inputvalue(this.value)">
+                <input type ="button" value="9" id = "chin" onclick="inputvalue(this.value)">
+                <input type ="button" value="*" id = "nhan" onclick="inputvalue(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type ="reset" value="C" id ="c" onclick="c()">
+                <input type ="button" value="0" id = "khong" onclick="inputvalue(this.value)">
+                <input type ="button" value="=" id ="bang" onclick="bang()">
+                <input type ="button" value="/" id = "chia" onclick="inputvalue(this.value)">
+            </td>
+        </tr>
+
+    </table>
+</from>
+
+</body>
+</html>
+<script>
+let output = document.getElementById("output");
+function inputvalue(value){
+    output.value += value;
+}
+function bang() {
+    let bang = eval(output.value);
+    output.value = bang;
+}
+function c() {
+    output.value = "";
+}
+</script>
